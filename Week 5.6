@@ -1,0 +1,12 @@
+# Input
+S = input().strip()
+L = int(input())
+
+# Split the string into words
+words = S.split()
+
+# Count the words whose length is at least L
+count = sum(1 for word in words if len(word) >= L)
+
+# Output
+print(count)
