@@ -1,0 +1,16 @@
+def expand_string(input_str):
+    result = ""
+    i = 0
+    while i < len(input_str):
+        char = input_str[i]
+        count = 0
+        i += 1
+        while i < len(input_str) and input_str[i].isdigit():
+            count = count * 10 + int(input_str[i])
+            i += 1
+        result += char * count
+    return result
+
+# Test cases
+sample_input = input()
+print(expand_string(sample_input))
